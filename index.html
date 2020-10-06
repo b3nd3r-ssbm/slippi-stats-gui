@@ -1,0 +1,91 @@
+<html>
+	<head>
+		<title>Slippi Stats GUI</title>
+		<style>
+			.statName{
+				font-weight: bold;
+				font-style: italic;
+			}
+			#container {
+				width:100%;
+				text-align:center;
+			}
+			#left {
+				float:left;
+				width:30%;
+			}
+
+			#center {
+				display: inline-block;
+				margin:0 auto;
+				width:40%;
+			}
+
+			#right {
+				float:right;
+				width:30%;
+			}
+			
+			.char {
+				background-color:#222;
+				border-radius: 25px;
+			}
+			@font-face {
+				font-family: 'Roboto';
+				src: url('Roboto-Light.woff2') format('woff2'),
+					url('Roboto-Light.woff') format('woff');
+				font-weight: 300;
+				font-style: normal;
+				font-display: swap;
+			}
+		</style>
+	</head>
+	<body style="background-color:#000;color:#fff;font-size:30px;font-family:'Roboto';">
+		<script src="index.js"></script>
+		<div id="init">
+			<input type="file" id="setIn" multiple accept=".slp">
+			<button onclick="copyFiles()">Submit!</button>
+		</div>
+		<div id="container" style="width:100%" hidden>
+			<div id="left" style="text-align:center">
+				<br><br><span id="code0"></span><br>
+				<img id="char0" class="char" width="272" height="376"></img>
+			</div>
+			<div id="center" style="font-size:25px">
+				<img id="winner"></img><br>
+				<span id="damage0"></span>
+				<span class="statName">&emsp;Total Damage&emsp;</span>
+				<span id="damage1"></span><br><br>
+				<span id="dOpen0"></span>
+				<span class="statName">&emsp;Damage/Opening&emsp;</span>
+				<span id="dOpen1"></span><br><br>
+				<span id="openK0"></span>
+				<span class="statName">&emsp;Opening/Kill&emsp;</span>
+				<span id="openK1"></span><br><br>
+				<span id="nWins0"></span>
+				<span class="statName">&emsp;Neutral Wins&emsp;</span>
+				<span id="nWins1"></span><br><br>
+				<span id="cHits0"></span>
+				<span class="statName">&emsp;Counter Hits&emsp;</span>
+				<span id="cHits1"></span><br><br>
+				<span id="apm0"></span>
+				<span class="statName">&emsp;Inputs/Minute&emsp;</span>
+				<span id="apm1"></span><br><br>
+				<span id="move0"></span><sub id="move0times"></sub>
+				<span class="statName">&emsp;Favorite Move&emsp;</span>
+				<span id="move1"></span><sub id="move1times"></sub><br><br>
+				<span id="kill0"></span><sub id="kill0times"></sub>
+				<span class="statName">&emsp;Favorite Kill Move&emsp;</span>
+				<span id="kill1"></span><sub id="kill1times"></sub>
+				<br><br>
+				<div id="gameCount" style="position:relative;text-align:center"></div><br>
+				<div id="games" style="text-align:center"></div>
+				<div id="wins" style="position:relative;text-align:center"></div>
+			</div>
+			<div id="right">
+				<br><br><span id="code1"></span><br>
+				<img id="char1" class="char" width="272" height="376"></img>
+			</div>
+		</div>
+	</body>
+</html>
