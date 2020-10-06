@@ -1,4 +1,5 @@
 # Slippi Stats GUI
+<img src="icon.png"></img>
 GUI for generating and viewing slippi stats, useful for using during a set 
 # How to run
 Simply download the exe from the releases tab, and run it. Select the slp files for the set and you're done!
