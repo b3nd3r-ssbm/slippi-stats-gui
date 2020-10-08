@@ -14,15 +14,14 @@ var gamePaths=[];
 var stats;
 
 if (app !== undefined) {
-    app
-        .on('ready', function () {
-            let win = new BrowserWindow({
-                webPreferences: {
-                    nodeIntegration: true
-                }
-            });
-            win.loadURL(`file://${__dirname}/index.html`);
+    app.on('ready', function () {
+        let win = new BrowserWindow({
+            webPreferences: {
+                nodeIntegration: true
+            }
         });
+        win.loadURL(`file://${__dirname}/index.html`);
+    });
 }
 
 function copyFiles(){
@@ -90,18 +89,4 @@ function setStages(){
 		picSet.src="./Stock-Icons/"+stats.games[i].winner.character.characterName+"/"+stats.games[i].winner.character.color+".png";
 		widthSet+=100;
 	}
-}
-
-function aspectRatio(){
-	let body=document.getElementsByTagName("body")[0];
-	let arr=reduce(body.offsetWidth,body.offsetHeight); 
-	return ""+arr[0]+":"+arr[1];
-}
-
-function reduce(numerator,denominator){
-  var gcd = function gcd(a,b){
-    return b ? gcd(b, a%b) : a;
-  };
-  gcd = gcd(numerator,denominator);
-  return [numerator/gcd, denominator/gcd];
 }
