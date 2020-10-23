@@ -247,7 +247,7 @@ function getStats(files, players = []) {
             player0Chars.push(player0.character);
             player1Chars.push(player1.character);
             // get moves from conversions and combos
-            _.each(stats.combos.concat(stats.conversions), (combo, i) => {
+            _.each(stats.conversions, (combo, i) => {
                 let namedMoves = combo.moves.map(move => slp.moves.getMoveShortName(move.moveId));
                 playerTotals[combo.playerIndex].moves = playerTotals[combo.playerIndex]
                     .moves
